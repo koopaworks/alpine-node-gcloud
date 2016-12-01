@@ -6,7 +6,7 @@ VOLUME /app
 
 RUN apk add --no-cache libc6-compat gcc g++ python make && \
  cd / && \
- npm install \@google-cloud/datastore bcrypt chokidar && \
+ npm install \@google-cloud/datastore \@google-cloud/storage bcrypt chokidar && \
  apk del python make gcc g++ && \
  rm -rf /etc/ssl /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp /root/.gnupg \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html && \
